@@ -9,6 +9,7 @@ namespace UserRegistrationValidation
             Console.WriteLine("User registration Validation");
             Patterns pattern = new Patterns();
             pattern.IsValidFirstName();
+            pattern.IsValidLastName();
         }
     }
 }
