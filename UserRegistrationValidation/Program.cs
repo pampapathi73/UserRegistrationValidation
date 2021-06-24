@@ -31,6 +31,8 @@ namespace UserRegistrationValidation
             pattern.IsValidSampleEmail("abc..2002@gmail.com");
             pattern.IsValidSampleEmail("abc.@gmail.com");
             pattern.IsValidSampleEmail("abc@abc@gmail.com");
+
         }
     }
 }
+s
