@@ -10,7 +10,7 @@ namespace UserRegistrationValidation
    public class Patterns
     {
         public static string Regex_name = "^[A-Z]{1}[a-z]{2,}$";
-        public static string Regex_email = "^[0-9A-Za-z]+([._+-][0-9A-Za-z]+)*[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
+        public static string Regex_email = "^[0-9A-Za-z]+([._+-]*[0-9A-Za-z]+)*[@][0-9A-Za-z]+.([a-zA-Z]{2,3})*(.[a-zA-Z]{2})?$";
         public static string Regex_phone = "^[1-9]{1}[0-9]{1}\\s[1-9]{1}[0-9]{9}$";
         public static string Regex_password = "^(?=.*[A-Z])(?=.*\\d)(?=[\\w]*[\\W][\\w]*$)[\\S]{8,}$";
         public bool IsValidFirstName(string firstname)
@@ -81,14 +81,18 @@ namespace UserRegistrationValidation
             while (!flag);
         }
 
-        public bool IsValidSampleEmail(string SampleEmail)
+        public bool IsValidSampleEmail(string sampleemail)
         {
-            bool flag = (Regex.IsMatch(SampleEmail, Regex_email));
-            if (flag == true)
-                return true;
-            else
-                return false;
-
+            bool flag;
+            do
+            {
+                flag = (Regex.IsMatch(sampleemail, Regex_email));
+                if (flag == true)
+                    return true;
+                else
+                    return false;
+            }
+            while (!flag);
         }
     }
 }
