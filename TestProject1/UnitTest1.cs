@@ -9,7 +9,7 @@ namespace TestProject1
         [TestMethod]
         public void ValidateFirstName_ReturnTrue()
         {
-            string FirstName = "Nilakhi";
+            string FirstName = "Pampapathi";
             Patterns pattern = new Patterns();
             bool result = pattern.IsValidFirstName(FirstName);
             Assert.IsTrue(result);
@@ -17,7 +17,7 @@ namespace TestProject1
         [TestMethod]
         public void ValidateLastName_ReturnTrue()
         {
-            string LastName = "Sharma";
+            string LastName = "Reddy";
             Patterns pattern = new Patterns();
             bool result = pattern.IsValidLastName(LastName);
             Assert.IsTrue(result);
@@ -25,7 +25,7 @@ namespace TestProject1
         [TestMethod]
         public void ValidateEmail_ReturnTrue()
         {
-            string Email = "riyan@gmail.com";
+            string Email = "Pampapathi@gmail.com";
             Patterns pattern = new Patterns();
             bool result = pattern.IsValidEmail(Email);
             Assert.IsTrue(result);
