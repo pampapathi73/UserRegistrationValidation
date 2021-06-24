@@ -22,7 +22,7 @@ namespace UserRegistrationValidation
                 if (flag == true)
                     return true;
                 else
-                    return false;
+                    throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_FIRSTNAME, "Invalid first name");
             }
             while (flag == false);
 
@@ -36,7 +36,7 @@ namespace UserRegistrationValidation
                 if (flag == true)
                     return true;
                 else
-                    return false;
+                    throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_LASTNAME, "Invalid last name");
             }
             while (!flag);
         }
@@ -49,7 +49,7 @@ namespace UserRegistrationValidation
                 if (flag == true)
                     return true;
                 else
-                    return false;
+                    throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_EMAIL, "Invalid email");
             }
             while (!flag);
         }
@@ -62,7 +62,7 @@ namespace UserRegistrationValidation
                 if (flag == true)
                     return true;
                 else
-                    return false;
+                    throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_MOBILE, "Invalid Phone number");
             }
             while (!flag);
         }
@@ -75,7 +75,7 @@ namespace UserRegistrationValidation
                 if (flag == true)
                     return true;
                 else
-                    return false;
+                    throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_PASSWORD, "Invalid password");
 
             }
             while (!flag);

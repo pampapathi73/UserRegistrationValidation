@@ -7,7 +7,7 @@ namespace UserRegistrationValidation
         static void Main(string[] args)
         {
             
-
         }
+
     }
 }
